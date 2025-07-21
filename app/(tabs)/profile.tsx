@@ -1,13 +1,13 @@
-import { Ionicons } from '@expo/vector-icons';
+import Feather from '@expo/vector-icons/Feather';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from 'expo-router';
 import React, { useState } from 'react';
 import { Animated, Image, Keyboard, StyleSheet, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 
 const Profile = () => {
-  const [userName, setUserName] = useState('John Doe');
-  const [hourlyRate, setHourlyRate] = useState('50');
+  const [userName, setUserName] = useState('Ranjit  Adhikari');
+  const [hourlyRate, setHourlyRate] = useState('40');
   const [fadeAnim] = useState(new Animated.Value(0));
+  
 
   // Fade-in animation
   React.useEffect(() => {
@@ -49,13 +49,15 @@ const Profile = () => {
               placeholderTextColor="#94a3b8"
               returnKeyType="done"
             />
+                       
           </View>
+          
 
           <View style={styles.statsCard}>
             <Text style={styles.sectionTitle}>Time-Value Stats</Text>
             <View style={styles.statRow}>
               <Text style={styles.statLabel}>Total Funds:</Text>
-              <Text style={styles.statValue}>$10,000</Text>
+              <Text style={styles.statValue}>$0</Text>
             </View>
             <View style={styles.statRow}>
               <Text style={styles.statLabel}>Hours Tracked:</Text>
@@ -64,26 +66,26 @@ const Profile = () => {
             <View style={styles.statRow}>
               <Text style={styles.statLabel}>Avg. Expense:</Text>
               <Text style={styles.statValue}>$500</Text>
-            </View>
-          </View>
 
-          <View style={styles.navigation}>
-            <Link href="/(tabs)/(tabs_calc)/TimeCalculator" asChild>
-              <TouchableOpacity style={styles.navButton}>
-                <Ionicons name="calculator" size={20} color="#fff" />
-                <Text style={styles.navButtonText}>Time Calculator</Text>
-              </TouchableOpacity>
-            </Link>
-            <Link href="/home" asChild>
-              <TouchableOpacity style={styles.navButton}>
-                <Ionicons name="home" size={20} color="#fff" />
-                <Text style={styles.navButtonText}>Home</Text>
-              </TouchableOpacity>
-            </Link>
+
+   
+            </View>
+      
+            
           </View>
+             <TouchableOpacity className='w-32 text-white' style={styles.navButton}>
+              <Text className='text-white font-bold mr-3'>Save</Text>
+           
+              <Feather name="save" size={24} color="white" />
+            </TouchableOpacity>
+        
+      
+             
+         
         </View>
       </LinearGradient>
     </TouchableWithoutFeedback>
+    
   );
 };
 

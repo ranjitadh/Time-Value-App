@@ -1,6 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from 'expo-router';
 import React, { useState } from 'react';
 import { Animated, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 
@@ -23,7 +22,7 @@ const Settings = () => {
   };
 
   const changeCurrency = () => {
-    // Placeholder for currency change logic (e.g., open a modal or picker)
+  
     setCurrency(currency === 'USD' ? 'EUR' : 'USD');
   };
 
@@ -65,32 +64,7 @@ const Settings = () => {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.navigation}>
-          <Link href="/(tabs)/(tabs_calc)/TimeCalculator" asChild>
-            <TouchableOpacity style={styles.navButton}>
-              <Ionicons name="calculator" size={20} color="#fff" />
-              <Text style={styles.navButtonText}>Time Calculator</Text>
-            </TouchableOpacity>
-          </Link>
-          <Link href="/home" asChild>
-            <TouchableOpacity style={styles.navButton}>
-              <Ionicons name="home" size={20} color="#fff" />
-              <Text style={styles.navButtonText}>Home</Text>
-            </TouchableOpacity>
-          </Link>
-          <Link href="/profile" asChild>
-            <TouchableOpacity style={styles.navButton}>
-              <Ionicons name="person" size={20} color="#fff" />
-              <Text style={styles.navButtonText}>Profile</Text>
-            </TouchableOpacity>
-          </Link>
-          <Link href="/notification" asChild>
-            <TouchableOpacity style={styles.navButton}>
-              <Ionicons name="notifications" size={20} color="#fff" />
-              <Text style={styles.navButtonText}>Notifications</Text>
-            </TouchableOpacity>
-          </Link>
-        </View>
+       
       </View>
     </LinearGradient>
   );
