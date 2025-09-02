@@ -1,0 +1,19 @@
+{
+  "cli": {
+    "version": ">= 3.15.0"
+  },
+  "build": {
+    "production": {
+      "android": {
+        "workflow": "bare",
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "development": {
+      "android": {
+        "workflow": "bare",
+        "gradleCommand": ":app:assembleDebug"
+      }
+    }
+  }
+}
